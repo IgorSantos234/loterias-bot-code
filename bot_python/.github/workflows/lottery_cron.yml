@@ -1,0 +1,57 @@
+name: "Bot Loterias Brasil - Verificador Noturno"
+
+on:
+  schedule:
+    # 20h00, 20h30, 21h00, 21h30, 22h00 e 22h30 Horário de Brasília (UTC-3)
+    # Equivalente em UTC: 23:00, 23:30, 00:00, 00:30, 01:00, 01:30 (segunda a sábado)
+    - cron: '0,30 23,0,1 * * 1-6'
+  workflow_dispatch: # Permite disparar manualmente pelo botão "Run workflow" no GitHub
+
+permissions:
+  contents: write # Permite comitar o arquivo lottery_state.json atualizado
+
+jobs:
+  check-lotteries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Instalar Dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r bot_python/requirements.txt
+
+      - name: Executar Checagem das Loterias
+        env:
+          WHATSAPP_PROVIDER: ${{ secrets.WHATSAPP_PROVIDER || 'evolution' }}
+          WHATSAPP_API_URL: ${{ secrets.WHATSAPP_API_URL }}
+          WHATSAPP_INSTANCE_ID: ${{ secrets.WHATSAPP_INSTANCE_ID || 'loterias-brasil' }}
+          WHATSAPP_API_KEY: ${{ secrets.WHATSAPP_API_KEY }}
+          WHATSAPP_CHANNEL_ID: ${{ secrets.WHATSAPP_CHANNEL_ID }}
+          LOTTERIES: "megasena,lotofacil,quina,lotomania,diadesorte"
+          STORAGE_TYPE: "json"
+          STORAGE_FILE_PATH: "bot_python/data/lottery_state.json"
+          TIMEZONE: "America/Sao_Paulo"
+        run: |
+          python bot_python/main.py --run-once
+
+      - name: Salvar Estado dos Concursos Processados no Repositório
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add bot_python/data/lottery_state.json || true
+          if git status --porcelain | grep -q "lottery_state.json"; then
+            git commit -m "chore(bot): atualiza historico de concursos processados [skip ci]"
+            git push
+          else
+            echo "Nenhum concurso novo processado neste ciclo. Estado inalterado."
+          fi
