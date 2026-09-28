@@ -5,38 +5,41 @@
   },
   "lotteries": {
     "megasena": {
-      "last_contest_number": 3062,
-      "last_processed_at": "2026-09-25T06:17:40.650019",
+      "last_contest_number": 3063,
+      "last_processed_at": "2026-09-28T02:47:22.585335",
       "history": [
         3060,
         3061,
-        3062
+        3062,
+        3063
       ],
-      "last_draw_date": "24/09/2026"
+      "last_draw_date": "27/09/2026"
     },
     "lotofacil": {
-      "last_contest_number": 3789,
-      "last_processed_at": "2026-09-26T06:17:19.494892",
+      "last_contest_number": 3790,
+      "last_processed_at": "2026-09-28T02:47:24.268552",
       "history": [
         3785,
         3786,
         3787,
         3788,
-        3789
+        3789,
+        3790
       ],
-      "last_draw_date": "25/09/2026"
+      "last_draw_date": "27/09/2026"
     },
     "quina": {
-      "last_contest_number": 7127,
-      "last_processed_at": "2026-09-26T06:17:21.179127",
+      "last_contest_number": 7128,
+      "last_processed_at": "2026-09-28T02:47:25.955886",
       "history": [
         7123,
         7124,
         7125,
         7126,
-        7127
+        7127,
+        7128
       ],
-      "last_draw_date": "25/09/2026"
+      "last_draw_date": "27/09/2026"
     },
     "lotomania": {
       "last_contest_number": 2980,
@@ -49,16 +52,17 @@
       "last_draw_date": "25/09/2026"
     },
     "diadesorte": {
-      "last_contest_number": 1307,
-      "last_processed_at": "2026-09-26T06:17:24.548049",
+      "last_contest_number": 1308,
+      "last_processed_at": "2026-09-28T02:47:27.868441",
       "history": [
         1303,
         1304,
         1305,
         1306,
-        1307
+        1307,
+        1308
       ],
-      "last_draw_date": "25/09/2026"
+      "last_draw_date": "27/09/2026"
     }
   }
 }
