@@ -5,8 +5,8 @@
   },
   "lotteries": {
     "megasena": {
-      "last_contest_number": 3086,
-      "last_processed_at": "2026-11-17T04:54:12.098027",
+      "last_contest_number": 3087,
+      "last_processed_at": "2026-11-20T03:48:03.370291",
       "history": [
         3060,
         3061,
@@ -33,13 +33,14 @@
         3083,
         3084,
         3085,
-        3086
+        3086,
+        3087
       ],
-      "last_draw_date": "15/11/2026"
+      "last_draw_date": "17/11/2026"
     },
     "lotofacil": {
-      "last_contest_number": 3831,
-      "last_processed_at": "2026-11-18T03:58:34.227456",
+      "last_contest_number": 3833,
+      "last_processed_at": "2026-11-20T03:48:05.264840",
       "history": [
         3785,
         3786,
@@ -84,13 +85,14 @@
         3828,
         3829,
         3830,
-        3831
+        3831,
+        3833
       ],
-      "last_draw_date": "16/11/2026"
+      "last_draw_date": "18/11/2026"
     },
     "quina": {
-      "last_contest_number": 7169,
-      "last_processed_at": "2026-11-18T03:58:35.910000",
+      "last_contest_number": 7171,
+      "last_processed_at": "2026-11-20T03:48:07.166030",
       "history": [
         7123,
         7124,
@@ -135,13 +137,14 @@
         7166,
         7167,
         7168,
-        7169
+        7169,
+        7171
       ],
-      "last_draw_date": "16/11/2026"
+      "last_draw_date": "18/11/2026"
     },
     "lotomania": {
-      "last_contest_number": 3000,
-      "last_processed_at": "2026-11-18T03:58:37.592537",
+      "last_contest_number": 3001,
+      "last_processed_at": "2026-11-20T03:48:09.060503",
       "history": [
         2978,
         2979,
@@ -164,13 +167,14 @@
         2997,
         2998,
         2999,
-        3000
+        3000,
+        3001
       ],
-      "last_draw_date": "16/11/2026"
+      "last_draw_date": "18/11/2026"
     },
     "diadesorte": {
-      "last_contest_number": 1349,
-      "last_processed_at": "2026-11-18T03:58:39.273677",
+      "last_contest_number": 1351,
+      "last_processed_at": "2026-11-20T03:48:10.956971",
       "history": [
         1303,
         1304,
@@ -215,9 +219,10 @@
         1346,
         1347,
         1348,
-        1349
+        1349,
+        1351
       ],
-      "last_draw_date": "16/11/2026"
+      "last_draw_date": "18/11/2026"
     }
   }
 }
